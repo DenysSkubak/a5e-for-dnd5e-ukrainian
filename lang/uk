@@ -1,0 +1,610 @@
+Skip to content
+Chat history
+
+
+You said:
+чи можна робити переклад модулю для фаундрі на гітхабів
+ChatGPT said:
+Коротко: так, можна, але залежить від ліцензії модуля і того, як саме ти це робиш.
+
+Ось розклад по поличках 👇
+
+✅ Коли МОЖНА викладати переклад модуля Foundry на GitHub
+1. Модуль має дозвільну ліцензію
+Перевір у репозиторії модуля:
+
+LICENSE
+
+README
+
+опис на Foundry Hub / GitHub
+
+Якщо там:
+
+MIT / Apache / GPL → переклад зазвичай дозволений
+
+прямо написано, що translations are allowed / contributions welcome → ок
+
+2. Ти викладаєш тільки файл перекладу
+Найбезпечніший варіант:
+
+lang/uk.json
+
+або окремий репозиторій типу
+module-name-uk-translation
+
+❗ Без:
+
+оригінального тексту модуля
+
+ассетів
+
+платного контенту
+
+3. Переклад як PR (Pull Request)
+Ідеальний сценарій:
+
+форкаєш репозиторій
+
+додаєш uk.json
+
+робиш PR
+
+Це 100% легально, якщо автор приймає внески.
+
+⚠️ Коли НЕ МОЖНА або ризиковано
+❌ Платні модулі
+D&D Beyond, Paizo, платні Foundry-модулі
+
+A5E контент, якщо він не SRD
+
+👉 навіть переклад = похідний твір, а це порушення авторського права
+
+❌ Якщо ліцензія прямо забороняє
+Наприклад:
+
+“No redistribution”
+
+“No derivative works”
+
+🟡 Сірі, але практиковані варіанти
+Окремий репозиторій з:
+ключами локалізації
+
+{
+  "ITEM.Sword.Name": "Меч"
+}
+без оригінального тексту
+
+👉 багато хто так робить, і це значно безпечніше, ніж викладати повний текст.
+
+🧠 Рекомендую тобі (з урахуванням твого досвіду з Foundry і A5E)
+Безкоштовні модулі → PR або окремий lang-репо
+
+A5E / SRD → можна перекладати тільки SRD-контент
+
+Платний контент →
+
+або не викладати публічно
+
+або домовлятись з автором
+
+Якщо хочеш — можу:
+перевірити конкретний модуль (кидай лінк)
+
+підказати як правильно оформити репозиторій перекладу
+
+написати README для перекладу (UA + EN)
+
+порадити, як це зробити так, щоб Foundry автоматично підхоплював локалізацію
+
+Просто скажи 👍
+
+You said:
+я можу тобі скинути посилання на модуль і ти скажеш як його перекласти
+ChatGPT said:
+Звісно — скидай посилання на модуль, і я подивлюсь:
+
+🔎 чи можна його перекласти
+📌 як саме зробити переклад (структура файлів)
+🧠 чи можна викладати на GitHub (і як безпечно)
+
+Чекаю на лінк 👍
+
+You said:
+https://github.com/JPMeehan/a5e-for-dnd5e
+ChatGPT said:
+Так — я глянув репозиторій a5e-for-dnd5e на GitHub. Нижче розбираю, як його правильно перекласти та що з ліцензією 👇 
+GitHub
+
+🧾 1. Ліцензія модуля (важливо)
+У репозиторії є три ліцензійні файли:
+
+LICENSE-MIT.md
+
+LICENSE-OGL.md
+
+LICENSE.md (нерозпізнаний, але, ймовірно, пов’язаний із контентом) 
+GitHub
+
+🔹 MIT — програмний код модуля, швидше за все, під цим дозволом (MIT — дозволяє змінювати і розповсюджувати код). 
+GitHub
+
+🔹 OGL — це Open Game License 1.0a, ймовірно для ігрового контенту (статистики, ігрові дані). 
+GitHub
+
+🔎 Що це означає на практиці:
+
+Код модуля ти можеш форкати, додавати переклади, і викладати (MIT)
+
+Ігровий контент A5E може бути під OGL — його переклад технічно теж можна, але потрібно дотримуватися умов OGL
+(зазвичай — включити текст ліцензії OGL у файл, якщо розповсюджуєш переклад) 
+GitHub
+
+⚠️ Якщо модуль містить контент, що не ліцензовано відкрито (наприклад, не є частиною OGL або SRD), тоді переклад і виклад може суперечити правам оригінального власника.
+
+🗂️ 2. Де міститься текст для перекладу
+У репо є папка:
+
+lang/
+Це стандартне місце для файлів локалізації (мовних JSON). 
+GitHub
+
+Це значить, що:
+
+Мовні файли вже є (повністю або частково)
+
+Їх можна розширювати або додавати нові
+
+Типова структура локалізації:
+
+lang/en.json   ← оригінальні англійські ключі
+lang/uk.json   ← твій український переклад
+🛠️ 3. Як перекласти модуль практично
+✅ Крок 1 — зробити форк репозиторію
+Натисни Fork у GitHub — отримаєш свою копію.
+
+✅ Крок 2 — створити переклад
+У папці lang/:
+
+Скопіювати англійський файл (наприклад, en.json)
+
+Перейменувати: uk.json
+
+Перекласти всі рядки
+
+Зберегти зміни
+
+Багато модулів Foundry підхоплюють мову автоматично, коли є uk.json.
+
+📌 4. Як зробити переклад опублікованим у GitHub
+🅰 Через PR у оригінальний репо
+Зроби форк
+
+Додай переклад
+
+Відправ Pull Request — можливо, автор додасть твій переклад офіційно
+
+Це найкращий варіант, коли автор підтримує співпрацю.
+
+🅱 Створити окремий модуль - переклад
+Якщо автор не хоче merge:
+
+Зроби новий репозиторій, наприклад:
+a5e-for-dnd5e-ukrainian-translation
+
+Лише файл локалізації + README
+
+У README вкажи:
+
+що це переклад
+
+від кого походить оригінальний модуль
+
+текст ліцензії OGL або MIT, якщо потрібно (дуже важливо, якщо ти поширюєш контент, що покривається OGL)
+
+📜 5. Ліцензійні вимоги для перекладу
+🔹 Оскільки в репо є OGL, ти повинен включити текст цієї ліцензії в свій переклад, якщо розповсюджуєш ігровий контент A5E (як JSON з даними) 
+GitHub
+
+🔹 Для коду (JS/CSS) — MIT дозволяє все, але все одно потрібно зберегти оригінальні текстові строки про авторські права.
+
+🧾 6. Поради для README перекладу
+У README свого перекладу додай:
+
+📌 Назва перекладу
+📌 Зв’язок з оригінальним репо ( посилання)
+📌 Ліцензії:
+
+This translation uses content from the original a5e-for-dnd5e repository.
+Code is MIT licensed (see LICENSE-MIT.md).
+Game content is provided under the OGL 1.0a license (see LICENSE-OGL.md).
+Translation itself is licensed under [вибрана тобою ліцензія, наприклад MIT].
+📌 Як встановити в Foundry
+
+🧠 Резюме
+✅ Переклад технічно можливий
+✅ Є папка lang/ для локалізації 
+GitHub
+
+⚠️ Але треба враховувати ліцензію OGL, якщо перекладаєш і розповсюджуєш гру/ігрові дані
+
+Хочеш — я можу згенерувати шаблон uk.json вже з усіма ключами на переклад (на основі en.json), або написати готовий README для твого перекладу.
+
+You said:
+{
+  "a5e-for-dnd5e": {
+    "Settings": {
+      "UseCultureEngineer": {
+        "name": "Use Culture and Engineering",
+        "hint": "Enable the Culture and Engineering skills"
+      },
+      "ShowBlankOrigins": {
+        "name": "Show Blank Culture and Destiny",
+        "hint": "Show blank spaces for culture and destiny on the character sheet if a character does not have them"
+      },
+      "UseFatigueStress": {
+        "name": "Use A5E Fatigue and Stress",
+        "hint": "Replaces the default Exhaustion track with ones for Fatigue and Stress. Also changes the result of a death save critical failure."
+      },
+      "UsePrestige": {
+        "name": "Use Prestige",
+        "hint": "Adds Prestige score to the character sheet"
+      },
+      "MultiPrestige": {
+        "name": "Multiple Prestige Tracks",
+        "hint": "Enable multiple tracks (requires Default 5e Character Sheet)"
+      }
+    },
+    "Fatigue": "Fatigue",
+    "FatigueLevel": "Fatigue Level {n}",
+    "Stress": "Stress",
+    "StressLevel": "Stress Level {n}",
+    "ExpertiseDie": {
+      "label": "Expertise Die",
+      "plural": "Expertise Dice"
+    },
+    "Prestige": {
+      "label": "Prestige",
+      "check": "Prestige Check",
+      "center": "Prestige Center",
+      "add": "Add Prestige Center"
+    },
+    "Culture": {
+      "Name": "Culture Name",
+      "SheetLabel": "Default Culture Sheet"
+    },
+    "culture.Add": "Add Culture",
+    "Destiny": {
+      "Name": "Destiny Name",
+      "SheetLabel": "Default Destiny Sheet",
+      "Add": "Add Destiny"
+    },
+    "destiny.Add": "Add Destiny",
+    "Maneuver": {
+      "Label": "Combat Maneuvers",
+      "SheetLabel": "Default Maneuver Sheet",
+      "Name": "Maneuver Name",
+      "Details": "Maneuver Details",
+      "Degree": "Maneuver Degree",
+      "Degrees": {
+        "0": "Basic Maneuver",
+        "1": "1st Degree",
+        "2": "2nd Degree",
+        "3": "3rd Degree",
+        "4": "4th Degree",
+        "5": "5th Degree"
+      },
+      "Tradition": "Combat Tradition",
+      "TraditionShort": "Tradition",
+      "Traditions": {
+        "adm": "Adamant Mountain",
+        "btz": "Biting Zephyr",
+        "mgl": "Mirror's Glint",
+        "mas": "Mist and Shade",
+        "rc": "Rapid Current",
+        "rze": "Razor's Edge",
+        "sk": "Sanguine Knot",
+        "ss": "Spirited Steed",
+        "tpi": "Tempered Iron",
+        "tac": "Tooth and Claw",
+        "uwh": "Unending Wheel",
+        "arcart": "Arcane Artillery",
+        "arckn": "Arcane Knight",
+        "awm": "Awakened Mind",
+        "bu": "Beast Unity",
+        "coj": "Comedic Jabs",
+        "cutom": "Cutting Omen",
+        "elb": "Eldritch Blackguard",
+        "gh": "Gallant Heart",
+        "grc": "Grinding Cog",
+        "sst": "Sanctified Steel",
+        "ssn": "Selfless Sentinel",
+        "vif": "Viper's Fangs"
+      },
+      "Prerequisite": "Prerequisite",
+      "Usage": "Maneuver Usage",
+      "Target": "Maneuver Target",
+      "isStance": "Maneuver is a stance",
+      "1EP": "Exertion Point",
+      "EP": "Exertion Points",
+      "TooManyEP": "You don't have that many Exertion Points available!",
+      "ActivationHeader": "Maneuver Execution",
+      "EffectHeader": "Maneuver Effects",
+      "Progression": {
+        "martial": "Default Maneuvers",
+        "herald": "Herald",
+        "scholar": "Scholar",
+        "wielder": "Wielder"
+      },
+      "Mastered": "Mastered",
+      "Properties": "Maneuver Properties"
+    },
+    "Stance": "Stance",
+    "WeaponProperty": {
+      "Burn": "Burn",
+      "Breaker": "Breaker",
+      "Compounding": "Compounding",
+      "Defensive": "Defensive",
+      "Flamboyant": "Flamboyant",
+      "HandMounted": "Hand Mounted",
+      "Inaccurate": "Inaccurate",
+      "Mounted": "Mounted",
+      "MuzzleLoading": "Muzzle Loader",
+      "Parrying": "Parrying",
+      "ParryingImmunity": "Parry Immune",
+      "Quickdraw": "Quickdraw",
+      "Range": "Range",
+      "Rifled": "Rifled",
+      "Scatter": "Scatter",
+      "Shock": "Shock",
+      "TriggerCharge": "Trigger Charge",
+      "Trip": "Trip",
+      "Vicious": "Vicious"
+    },
+    "Spell": {
+      "Rare": "Rare",
+      "Secondary": {
+        "label": "Secondary Schools",
+        "Schools": {
+          "Acid": "Acid",
+          "Affliction": "Affliction",
+          "Air": "Air",
+          "Arcane": "Arcane",
+          "Architecture": "Architecture",
+          "Attack": "Attack",
+          "Beasts": "Beasts",
+          "Chaos": "Chaos",
+          "Cold": "Cold",
+          "Communication": "Communication",
+          "Compulsion": "Compulsion",
+          "Control": "Control",
+          "Displacement": "Displacement",
+          "Divine": "Divine",
+          "Earth": "Earth",
+          "Enhancement": "Enhancement",
+          "Evil": "Evil",
+          "Fear": "Fear",
+          "Fire": "Fire",
+          "Force": "Force",
+          "Good": "Good",
+          "Healing": "Healing",
+          "Hearth": "Hearth",
+          "Knowledge": "Knowledge",
+          "Law": "Law",
+          "Lightning": "Lightning",
+          "Movement": "Movement",
+          "Multiclass": "Multiclass",
+          "Nature": "Nature",
+          "Necrotic": "Necrotic",
+          "Negation": "Negation",
+          "Obscurement": "Obscurement",
+          "Planar": "Planar",
+          "Plants": "Plants",
+          "Poison": "Poison",
+          "Prismatic": "Prismatic",
+          "Protection": "Protection",
+          "Psionic": "Psionic",
+          "Psychic": "Psychic",
+          "Radiant": "Radiant",
+          "Scrying": "Scrying",
+          "Senses": "Senses",
+          "Shadow": "Shadow",
+          "Shapechanging": "Shapechanging",
+          "Sound": "Sound",
+          "Storm": "Storm",
+          "Summoning": "Summoning",
+          "Technological": "Technological",
+          "Telepathy": "Telepathy",
+          "Teleportation": "Teleportation",
+          "Terrain": "Terrain",
+          "Thunder": "Thunder",
+          "Time": "Time",
+          "Transformation": "Transformation",
+          "Unarmed": "Unarmed",
+          "Undead": "Undead",
+          "Utility": "Utility",
+          "Water": "Water",
+          "Weaponry": "Weaponry",
+          "Weather": "Weather"
+        }
+      }
+    }
+  },
+  "DND5E": {
+    "Feature": {
+      "Culture": "Culture Feature",
+      "Destiny": "Destiny Feature",
+      "Race": "Heritage Feature"
+    },
+    "ClassFeature": {
+      "PracticedTechnique": "Practiced Technique",
+      "FocusFeature": "Focus Feature",
+      "FieldDiscovery": "Field Discovery",
+      "BattleHymn": "Battle Hymn",
+      "DevelopedTalent": "Developed Talent",
+      "FuriousCritical": "Furious Critical",
+      "FaithSign": "Sign of Faith",
+      "NatureSecret": "Secret of Nature",
+      "SoldieringKnack": "Soldiering Knack",
+      "DivineLesson": "Divine Lesson",
+      "WarLesson": "War Lesson",
+      "ExplorationKnack": "Exploration Knack",
+      "SkillTrick": "Skill Trick",
+      "CleverScheme": "Clever Scheme",
+      "SavantTrick": "Savant Trick",
+      "ArcaneInnovation": "Arcane Innovation",
+      "SecretArcana": "Secret Arcana",
+      "ElectiveStudy": "Elective Study",
+      "MagicalMystery": "Magical Mystery"
+    },
+    "SkillCul": "Culture",
+    "SkillEng": "Engineering",
+    "SizeTitan": "Titanic",
+    "SizeTitanAbbr": "Tt",
+    "WeaponRareM": "Rare Melee",
+    "WeaponRareProficiency": "Rare",
+    "WeaponRareR": "Rare Ranged"
+  },
+  "TYPES.Item": {
+    "a5e-for-dnd5e": {
+      "culture": "Culture",
+      "culturePl": "Cultures",
+      "destiny": "Destiny",
+      "destinyPl": "Destinies",
+      "maneuver": "Combat Maneuver",
+      "maneuverPl": "Combat Maneuvers"
+    },
+    "race": "Heritage",
+    "racePl": "Heritages"
+  }
+}
+ChatGPT said:
+Так, це саме той файл локалізації, який треба перекладати 👍
+Нижче — готовий український варіант для цього шматка (можеш вставити як lang/uk.json або як частину більшого uk.json). Я залишив усі ключі без змін, а переклав тільки значення.
+
+{
+  "a5e-for-dnd5e": {
+    "Settings": {
+      "UseCultureEngineer": {
+        "name": "Використовувати «Культура» та «Інженерія»",
+        "hint": "Увімкнути навички «Культура» та «Інженерія»"
+      },
+      "ShowBlankOrigins": {
+        "name": "Показувати порожні «Культура» та «Доля»",
+        "hint": "Показувати порожні поля культури та долі в листі персонажа, якщо персонаж їх не має"
+      },
+      "UseFatigueStress": {
+        "name": "Використовувати втому та стрес A5E",
+        "hint": "Замінює стандартну шкалу виснаження на шкали Втоми та Стресу. Також змінює результат критичної невдачі ряткидка від смерті."
+      },
+      "UsePrestige": {
+        "name": "Використовувати престиж",
+        "hint": "Додає показник Престижу до листа персонажа"
+      },
+      "MultiPrestige": {
+        "name": "Кілька шкал престижу",
+        "hint": "Увімкнути кілька шкал (потрібен Default 5e Character Sheet)"
+      }
+    },
+    "Fatigue": "Втома",
+    "FatigueLevel": "Рівень втоми {n}",
+    "Stress": "Стрес",
+    "StressLevel": "Рівень стресу {n}",
+    "ExpertiseDie": {
+      "label": "Кубик майстерності",
+      "plural": "Кубики майстерності"
+    },
+    "Prestige": {
+      "label": "Престиж",
+      "check": "Перевірка престижу",
+      "center": "Осередок престижу",
+      "add": "Додати осередок престижу"
+    },
+    "Culture": {
+      "Name": "Назва культури",
+      "SheetLabel": "Аркуш культури за замовчуванням"
+    },
+    "culture.Add": "Додати культуру",
+    "Destiny": {
+      "Name": "Назва долі",
+      "SheetLabel": "Аркуш долі за замовчуванням",
+      "Add": "Додати долю"
+    },
+    "destiny.Add": "Додати долю",
+    "Maneuver": {
+      "Label": "Бойові маневри",
+      "SheetLabel": "Аркуш маневру за замовчуванням",
+      "Name": "Назва маневру",
+      "Details": "Деталі маневру",
+      "Degree": "Ступінь маневру",
+      "Degrees": {
+        "0": "Базовий маневр",
+        "1": "1-й ступінь",
+        "2": "2-й ступінь",
+        "3": "3-й ступінь",
+        "4": "4-й ступінь",
+        "5": "5-й ступінь"
+      },
+      "Tradition": "Бойова традиція",
+      "TraditionShort": "Традиція",
+      "Traditions": {
+        "adm": "Адамантова гора",
+        "btz": "Кусючий зефір",
+        "mgl": "Блиск дзеркала",
+        "mas": "Туман і тінь",
+        "rc": "Швидка течія",
+        "rze": "Гострий край",
+        "sk": "Кривавий вузол",
+        "ss": "Запальний скакун",
+        "tpi": "Загартоване залізо",
+        "tac": "Зуб і кіготь",
+        "uwh": "Нескінченне колесо",
+        "arcart": "Арканна артилерія",
+        "arckn": "Арканний лицар",
+        "awm": "Пробуджений розум",
+        "bu": "Єдність звіра",
+        "coj": "Комедійні підколи",
+        "cutom": "Рокове знамення",
+        "elb": "Ельдричний чорний гвардієць",
+        "gh": "Шляхетне серце",
+        "grc": "Скреготливий механізм",
+        "sst": "Освячена сталь",
+        "ssn": "Самовідданий вартовий",
+        "vif": "Ікла гадюки"
+      },
+      "Prerequisite": "Передумова",
+      "Usage": "Використання маневру",
+      "Target": "Ціль маневру",
+      "isStance": "Маневр є стійкою",
+      "1EP": "Пункт напруги",
+      "EP": "Пункти напруги",
+      "TooManyEP": "У вас немає стільки доступних пунктів напруги!",
+      "ActivationHeader": "Виконання маневру",
+      "EffectHeader": "Ефекти маневру",
+      "Progression": {
+        "martial": "Маневри за замовчуванням",
+        "herald": "Геральд",
+        "scholar": "Учений",
+        "wielder": "Носій"
+      },
+      "Mastered": "Опановано",
+      "Properties": "Властивості маневру"
+    },
+    "Stance": "Стійка",
+    "WeaponProperty": {
+      "Burn": "Паління",
+      "Breaker": "Пробійник",
+      "Compounding": "Накопичувальний",
+      "Defensive": "Захисний",
+      "Flamboyant": "Епатажний",
+      "HandMounted": "Кріплення на руку",
+      "Inaccurate": "Неточний",
+      "Mounted": "Верховий",
+      "MuzzleLoading": "Дуль
+
+
+
+Файл не вибраноФайл не вибрано
+ChatGPT can make mistakes. Check important info.
+ChatGPT is still generating a response...
