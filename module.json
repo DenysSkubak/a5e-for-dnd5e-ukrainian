@@ -1,6 +1,6 @@
 {
   "id": "a5e-for-dnd5e",
-  "title": "A5E for dnd5e",
+  "title": "A5E для dnd5e",
   "version": "#{VERSION}#",
   "compatibility": {
     "minimum": "12",
@@ -25,200 +25,57 @@
       }
     ]
   },
-  "description": "A conversion of a5e material to the dnd5e system",
+  "description": "Адаптація матеріалів Level Up: Advanced 5E для системи dnd5e",
   "authors": [
     {
       "name": "Joseph M.",
       "url": "https://joseph-meehan.carrd.co/",
       "discord": "ChaosOS#1948"
+    },
+    {
+      "name": "Українська локалізація: Denys Skubak",
+      "url": "https://github.com/DenysSkubak"
     }
   ],
   "packs": [
-    {
-      "name": "classes",
-      "label": "Classes",
-      "path": "packs/classes",
-      "type": "Item",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "subclasses",
-      "label": "Subclasses",
-      "path": "packs/subclasses",
-      "type": "Item",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "class-features",
-      "label": "Class & Subclass Features",
-      "path": "packs/class-features",
-      "type": "Item",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "feats",
-      "label": "Feats",
-      "path": "packs/feats",
-      "type": "Item",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "origins",
-      "label": "Origins",
-      "path": "packs/origins",
-      "type": "Item",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "origin-features",
-      "label": "Origin Features",
-      "path": "packs/origin-features",
-      "type": "Item",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "spells",
-      "label": "Spells",
-      "path": "packs/spells",
-      "type": "Item",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "maneuvers",
-      "label": "Combat Maneuvers",
-      "path": "packs/maneuvers",
-      "type": "Item",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "gear",
-      "label": "Gear",
-      "path": "packs/gear",
-      "type": "Item",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "monsters",
-      "label": "Monsters",
-      "path": "packs/monsters",
-      "type": "Actor",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "LIMITED",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "monster-features",
-      "label": "Monster Features",
-      "path": "packs/monster-features",
-      "type": "Item",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "LIMITED",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "rules",
-      "label": "Rules",
-      "path": "packs/rules",
-      "type": "JournalEntry",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "tables",
-      "label": "Tables",
-      "path": "packs/tables",
-      "type": "RollTable",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "macros",
-      "label": "Macros",
-      "path": "packs/macros",
-      "type": "Macro",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    }
+    { "name": "classes", "label": "Класи", "path": "packs/classes", "type": "Item", "system": "dnd5e", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "subclasses", "label": "Підкласи", "path": "packs/subclasses", "type": "Item", "system": "dnd5e", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "class-features", "label": "Особливості класів і підкласів", "path": "packs/class-features", "type": "Item", "system": "dnd5e", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "feats", "label": "Таланти", "path": "packs/feats", "type": "Item", "system": "dnd5e", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "origins", "label": "Походження", "path": "packs/origins", "type": "Item", "system": "dnd5e", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "origin-features", "label": "Особливості походження", "path": "packs/origin-features", "type": "Item", "system": "dnd5e", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "spells", "label": "Закляття", "path": "packs/spells", "type": "Item", "system": "dnd5e", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "maneuvers", "label": "Бойові маневри", "path": "packs/maneuvers", "type": "Item", "system": "dnd5e", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "gear", "label": "Спорядження", "path": "packs/gear", "type": "Item", "system": "dnd5e", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "monsters", "label": "Монстри", "path": "packs/monsters", "type": "Actor", "system": "dnd5e", "ownership": { "PLAYER": "LIMITED", "ASSISTANT": "OWNER" } },
+    { "name": "monster-features", "label": "Особливості монстрів", "path": "packs/monster-features", "type": "Item", "system": "dnd5e", "ownership": { "PLAYER": "LIMITED", "ASSISTANT": "OWNER" } },
+    { "name": "rules", "label": "Правила", "path": "packs/rules", "type": "JournalEntry", "system": "dnd5e", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "tables", "label": "Таблиці", "path": "packs/tables", "type": "RollTable", "system": "dnd5e", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "macros", "label": "Макроси", "path": "packs/macros", "type": "Macro", "system": "dnd5e", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } }
   ],
   "packFolders": [
     {
-      "name": "Level Up: Advanced 5th Edition",
+      "name": "Level Up: Advanced 5E",
       "sorting": "a",
       "packs": ["rules", "tables", "macros"],
       "color": "#CD853F",
       "folders": [
         {
-          "name": "Character Features",
+          "name": "Особливості персонажа",
           "sorting": "m",
-          "packs": [
-            "classes",
-            "subclasses",
-            "class-features",
-            "origins",
-            "origin-features",
-            "feats"
-          ],
+          "packs": ["classes", "subclasses", "class-features", "origins", "origin-features", "feats"],
           "color": "#ba7a3b",
           "folders": []
         },
         {
-          "name": "Gear, Spells, and Maneuvers",
+          "name": "Спорядження, закляття та маневри",
           "sorting": "m",
           "packs": ["gear", "spells", "maneuvers"],
           "color": "#8f5e2d",
           "folders": []
         },
         {
-          "name": "Monsters",
+          "name": "Монстри",
           "sorting": "a",
           "packs": ["monsters", "monster-features"],
           "color": "#704a23",
@@ -230,43 +87,21 @@
   "esmodules": ["a5e.mjs"],
   "styles": ["a5e.css"],
   "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json",
-      "flags": {}
-    }
+    { "lang": "en", "name": "English", "path": "lang/en.json", "flags": {} },
+    { "lang": "uk", "name": "Українська", "path": "lang/uk.json", "flags": {} }
   ],
   "documentTypes": {
     "Item": {
-      "culture": {
-        "htmlFields": [
-          "description.value",
-          "description.chat",
-          "unidentified.description"
-        ]
-      },
-      "destiny": {
-        "htmlFields": [
-          "description.value",
-          "description.chat",
-          "unidentified.description"
-        ]
-      },
-      "maneuver": {
-        "htmlFields": [
-          "description.value",
-          "description.chat",
-          "unidentified.description"
-        ]
-      }
+      "culture": { "htmlFields": ["description.value", "description.chat", "unidentified.description"] },
+      "destiny": { "htmlFields": ["description.value", "description.chat", "unidentified.description"] },
+      "maneuver": { "htmlFields": ["description.value", "description.chat", "unidentified.description"] }
     }
   },
   "url": "#{URL}#",
-  "readme": "https://github.com/JPMeehan/a5e-for-dnd5e/blob/main/README.md",
-  "license": "https://github.com/JPMeehan/a5e-for-dnd5e/blob/main/LICENSE.md",
-  "bugs": "https://github.com/JPMeehan/a5e-for-dnd5e/issues",
-  "changelog": "https://github.com/JPMeehan/a5e-for-dnd5e/blob/main/CHANGELOG.md",
+  "readme": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian",
+  "license": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian/blob/main/LICENSE.md",
+  "bugs": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian/issues",
+  "changelog": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian/blob/main/CHANGELOG.md",
   "download": "#{DOWNLOAD}#",
-  "manifest": "https://github.com/JPMeehan/a5e-for-dnd5e/releases/latest/download/module.json"
+  "manifest": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian/releases/latest/download/module.json"
 }
