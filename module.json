@@ -1,5 +1,5 @@
 {
-  "id": "a5e-for-dnd5e",
+  "id": "a5e-for-dnd5e-ukrainian",
   "title": "A5E для dnd5e",
   "version": "0.1.1",
   "compatibility": {
@@ -97,11 +97,14 @@
       "maneuver": { "htmlFields": ["description.value", "description.chat", "unidentified.description"] }
     }
   },
+
   "url": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian",
   "readme": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian",
+
+  "manifest": "https://raw.githubusercontent.com/DenysSkubak/a5e-for-dnd5e-ukrainian/main/module.json",
+  "download": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian/archive/refs/heads/main.zip",
+
   "license": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian/blob/main/LICENSE.md",
   "bugs": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian/issues",
-  "changelog": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian/blob/main/CHANGELOG.md",
-  "manifest": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian/releases/latest/download/module.json",
-  "download": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian/releases/latest/download/a5e-for-dnd5e-ukrainian.zip"
+  "changelog": "https://github.com/DenysSkubak/a5e-for-dnd5e-ukrainian/blob/main/CHANGELOG.md"
 }
