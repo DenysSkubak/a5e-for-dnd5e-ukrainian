@@ -1,18 +1,10 @@
-name: Lancer's Leap Action (Lancer)
+name: Стрибок списника: дія (Списник)
 type: a5e-for-dnd5e.maneuver
 img: icons/skills/movement/arrows-up-trio-red.webp
 system:
   description:
     value: >-
-      <p><strong>Lancer’s Leap (1 point)</strong></p><p><em>Lancer
-      action</em></p><p>With the force of a thunderbolt you strike your target
-      from above. When you glide, ride, leap, fall, or fly during your turn, you
-      deal additional damage to the target of this attack equal to one haft die
-      per 10ft of movement you take before making the
-      attack.&nbsp;</p><p><br>Once you have used the Lancer’s Leap you must
-      complete a short or long rest before using it, again. If you spend 3
-      exertion points before a short or long rest, the use of this ability
-      recharges.</p>
+      <p><strong>Стрибок списника (1 пункт)</strong></p><p><em>Дія списника</em></p><p>З силою громовиці ти вражаєш ціль згори. Коли під час свого ходу ти ковзаєш, їдеш верхи, стрибаєш, падаєш або летиш, ти завдаєш цілі цієї атаки додаткової шкоди, що дорівнює одному кубику руків’я за кожні 10 футів переміщення, яке ти здійснив перед виконанням атаки.&nbsp;</p><p><br>Після використання «Стрибка списника» ти маєш завершити короткий або тривалий відпочинок, перш ніж зможеш використати його знову. Якщо ти витратиш 3 пункти напруги до короткого або тривалого відпочинку, використання цієї здатності відновлюється.</p>
     chat: ''
   source:
     book: 'System Architecture: Motif Classes'
